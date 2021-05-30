@@ -1,0 +1,123 @@
+.Sider {
+  @siderBottom: 12rem;
+  overflow: hidden;
+  background-color: var(--siderBg);
+  transition: 0.5s;
+  max-height: 100%;
+  width: calc(var(--siderUncollapsedWidth) * 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &.Sider--collapsed {
+    width: calc(var(--siderCollapsedWidth) * 1rem);
+  }
+
+  .menu {
+    overflow: auto;
+
+    .selector {
+      position: absolute;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: calc(var(--siderCollapsedWidth) * 1rem);
+      background-color: var(--primary);
+      top: calc(var(--sider-selector-translateX) * 1%);
+      transition: calc(var(--sider-selector-smooth) * 1ms);
+    }
+
+    ol {
+      padding: 0;
+      margin: 0;
+      position: relative;
+
+      a {
+        font-size: 1.6em;
+        color: var(--darkGray);
+        line-height: 0.9em;
+        letter-spacing: -0.1rem;
+
+        &.active {
+          color: white;
+          li {
+            color: white;
+          }
+        }
+
+        &:hover {
+          color: white;
+        }
+
+        &.feedback .menuLabel {
+          width: 1rem;
+          white-space: normal;
+        }
+      }
+
+      li {
+        .collapseContent {
+          min-width: calc(var(--siderCollapsedWidth) * 1rem);
+          min-height: calc(var(--siderCollapsedWidth) * 1rem);
+          max-width: calc(var(--siderCollapsedWidth) * 1rem);
+          max-height: calc(var(--siderCollapsedWidth) * 1rem);
+
+          .IconInCircle {
+            position: absolute;
+            z-index: 3;
+          }
+        }
+
+        span {
+          white-space: nowrap;
+          z-index: 3;
+        }
+
+        .menuLabel {
+          text-align: start;
+        }
+
+        &.collapseButton {
+          min-height: calc(var(--siderCollapsedWidth) * 1rem);
+          max-height: calc(var(--siderCollapsedWidth) * 1rem);
+
+          justify-content: center;
+          padding-left: 0;
+
+          &:hover {
+            color: var(--primary);
+          }
+
+          .IconWrapperUI {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .siderBottom {
+    width: 100%;
+    position: relative;
+    background-color: var(--siderBg);
+    min-height: 17rem;
+    max-height: 17rem;
+    transition: 0.5s;
+  }
+
+  .privacyPolicy {
+    position: absolute;
+    bottom: 8.7rem;
+    left: 2rem;
+    font-size: 1.3em;
+    line-height: 0.8em;
+    width: 0.5rem;
+  }
+
+  .bottomImg {
+    width: @siderBottom;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

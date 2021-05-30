@@ -1,0 +1,72 @@
+.FeedbackDialog {
+  z-index: 5;
+  background-color: var(--white);
+
+  h1 {
+    font-size: 3.5em;
+  }
+}
+.horizontalBlock {
+  // width: calc(100% - 17px);
+  // max-width: calc(100% - 17px);
+  // min-width: calc(100% - 17px);
+  overflow-y: scroll;
+
+  // section {
+  //   background-color: white;
+  //   margin-right: 17px;
+  //   padding-left: 17px;
+  // }
+}
+
+.dialogTopBlock {
+  height: 15rem;
+  overflow: hidden;
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  left: 0;
+  z-index: 6;
+}
+
+.dialogLine {
+  // margin: 1rem 0;
+  height: 300rem;
+  width: 77rem;
+  border: 2px solid var(--gray);
+  box-sizing: border-box;
+}
+
+.textarea {
+  overflow-y: scroll;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: none;
+  // min-height: 4rem;
+  max-height: 30rem;
+  margin-bottom: calc(var(--margin) * 1rem);
+  background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.DialogBottomBlock {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+  position: sticky;
+  background-color: white;
+  left: 0;
+  min-height: 15rem;
+  bottom: 0;
+  z-index: 6;
+
+  .messageInput {
+    width: 77rem;
+    background-color: white;
+  }
+}

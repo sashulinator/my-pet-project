@@ -1,0 +1,39 @@
+.RefillableList {
+  position: relative;
+
+  .listWrapper {
+    .CheckboxButtonApp {
+      padding: 0rem 4rem;
+      border-style: dashed;
+      line-height: 0;
+
+      .placeholder {
+        color: var(--color);
+      }
+
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.159);
+      }
+    }
+  }
+
+  .errorWrapper {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    left: 0;
+  }
+}
+
+.formItemGroup {
+  display: flex;
+  width: 100%;
+
+  :first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .InputApp {
+    width: 100%;
+  }
+}

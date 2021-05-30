@@ -1,0 +1,56 @@
+@import './src/style/components/editingEvents.less';
+
+.SearchCarList {
+  .rc-collapse-content-hidden {
+    display: none;
+    // height: 0;
+    // transition: 0.2s;
+  }
+
+  .rc-collapse-content {
+    overflow: hidden;
+  }
+
+  .CarListItem {
+    margin-top: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--borderColor);
+    padding: calc(var(--margin) * 1rem) calc(var(--marginS) * 1rem);
+
+    .additionalInfo {
+      align-self: center;
+    }
+
+    .checkbox {
+      position: absolute;
+    }
+  }
+}
+
+.popupSendMessageForm {
+  .formField {
+    width: 100%;
+
+    textarea {
+      height: 10em;
+    }
+  }
+
+  .mailsFiled {
+    #common_edit > .mailsFiled;
+  }
+
+  .mailList {
+    #common_edit > .mailList;
+  }
+
+  input[type='checkbox'] + label {
+    cursor: pointer;
+  }
+
+  .margin-bottom1 {
+    margin-bottom: 1em;
+  }
+}

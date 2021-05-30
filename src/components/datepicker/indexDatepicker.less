@@ -1,0 +1,55 @@
+.react-date-picker {
+  background-color: var(--datepickerBg, var(--formItemBg, transparent));
+  height: var(--datepickerHeight, var(--formItemHeight, 4rem));
+
+  &--open {
+    .react-date-picker__wrapper {
+      border-color: var(--outlineColor, blue);
+    }
+  }
+
+  &.unset {
+    .iconApp {
+      display: none;
+    }
+  }
+
+  .iconApp {
+    color: var(--datepickerBorderColor, var(--formItemBorderColor, black));
+  }
+
+  input {
+    color: var(--datepickerColor, var(--formItemColor, grey));
+
+    &::placeholder {
+      color: var(--datepickerPlaceholderColor, var(--formItemPlaceholderColor, grey));
+    }
+  }
+
+  datepicker {
+    background-color: transparent;
+    color: var(--datepickerColor, var(--formItemColor, white));
+  }
+
+  &.wide {
+    width: 100%;
+  }
+
+  &--disabled {
+  }
+
+  &__wrapper {
+    padding-left: 2rem;
+
+    border-style: var(--datepickerBorderWidth, var(--formItemBorderWidth, solid));
+    border-width: var(--datepickerBorderWidth, var(--formItemBorderWidth, 1px));
+    border-color: var(--datepickerBorderColor, var(--formItemBorderColor, black));
+    border-radius: var(--datepickerBorderRadius, var(--formItemBorderRadius, 0.3rem));
+  }
+
+  &__inputGroup {
+    &__divider {
+      color: var(--datepickerPlaceholderColor, var(--formItemPlaceholderColor, grey));
+    }
+  }
+}

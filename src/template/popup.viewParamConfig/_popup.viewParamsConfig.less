@@ -1,0 +1,86 @@
+.paramConfigWrapper {
+  width: 80vw;
+  min-width: 70rem;
+  max-width: 120rem;
+  padding: 4rem 6rem;
+
+  * {
+    color: var(--color);
+  }
+
+  .vehicle {
+    min-width: 30rem;
+    padding-right: 5rem;
+
+    ol {
+      display: flex;
+      margin-bottom: 2rem;
+
+      div {
+        font-size: 1.2em;
+        display: flex;
+        justify-content: space-between;
+
+        div {
+          min-width: 50%;
+          max-width: 50%;
+
+          &:first-child {
+            padding-right: 1em;
+          }
+
+          &:last-child {
+            white-space: nowrap;
+            display: flex;
+            align-items: flex-end;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+
+  .params {
+    width: 100%;
+
+    ol {
+      &:first-child > div {
+        padding-top: 0;
+      }
+
+      div {
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        font-size: 1.4em;
+
+        div {
+          align-items: flex-end;
+
+          &:first-child {
+            padding-right: 1em;
+            margin-left: 3rem;
+          }
+
+          &:last-child {
+            font-weight: bolder;
+            justify-content: flex-end;
+            margin-right: 3rem;
+            white-space: nowrap;
+
+            .IconWrapperUI {
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+
+      &:not(:last-child)::after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: rgb(213, 213, 213);
+      }
+    }
+  }
+}

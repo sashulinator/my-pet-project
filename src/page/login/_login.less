@@ -1,0 +1,100 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  background-color: var(--bgDark);
+  z-index: 10;
+
+  .gradient {
+    z-index: 1;
+    background: linear-gradient(180deg, #242933 58.85%, rgba(36, 41, 51, 0) 100%);
+  }
+
+  .loginFormWrapper {
+    transform: translateY(-7.7rem);
+    z-index: 2;
+    font-size: 1.6em;
+
+    .logos {
+      margin-bottom: 7.5rem;
+
+      :not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    form {
+      .formField {
+        position: relative;
+        margin-bottom: 2rem;
+        margin-right: auto;
+
+        .fieldError {
+          color: rgb(255, 92, 92);
+          position: absolute;
+          bottom: -1.7rem;
+          left: 5.2rem;
+          font-size: 0.7em;
+        }
+      }
+
+      .IconInCircle {
+        margin-right: 2rem;
+      }
+
+      .VisibilitySwitcher {
+        font-size: 1.1em;
+        width: 3.2rem;
+        margin-left: 2rem;
+      }
+
+      @btn-input-width: 22.5rem;
+      input {
+        text-align: center;
+        width: @btn-input-width;
+        border-radius: 0;
+      }
+
+      .checkboxField {
+        margin-top: 2.3rem;
+
+        .checkbox {
+          // я знаю что страшно выглядит :((((
+          transform: scale(0.8) translateX(-20%);
+          margin-right: 1rem;
+          word-wrap: break-word;
+        }
+
+        .checkboxWrapper {
+          max-width: 27rem;
+          label {
+            line-height: 1.2em;
+            font-size: 0.98em;
+            word-wrap: break-word;
+          }
+        }
+      }
+
+      button {
+        margin-top: 4rem;
+        width: calc(@btn-input-width + 3.5rem);
+      }
+    }
+  }
+}
+
+.login-exit-active {
+  animation-name: toBottom;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+.login-enter-active {
+  animation-name: toBottom;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-direction: reverse;
+}

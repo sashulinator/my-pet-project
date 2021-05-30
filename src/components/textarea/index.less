@@ -1,0 +1,36 @@
+.TextareaApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  min-width: 10rem;
+
+  &.TextareaApp--focused {
+    border-color: var(--outlineColor, blue);
+  }
+
+  .textareaText {
+    padding: 1rem 2rem;
+    margin: 0;
+    border: 0;
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    outline: none;
+  }
+
+  .iconApp {
+    cursor: pointer;
+    outline: none;
+    height: 15px;
+    width: 15px;
+  }
+
+  &.wide {
+    width: 100%;
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}

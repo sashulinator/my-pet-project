@@ -1,0 +1,43 @@
+@iterations: 7;
+
+.paddingRightLoop (@i) when (@i > 0) {
+  .pr@{i} {
+    padding-right: ~'@{i}rem';
+  }
+  .paddingRightLoop(@i - 1);
+}
+
+.paddingRightLoop (@iterations);
+
+//
+
+.paddingLeftLoop (@i) when (@i > 0) {
+  .pl@{i} {
+    padding-left: ~'@{i}rem';
+  }
+  .paddingLeftLoop(@i - 1);
+}
+
+.paddingLeftLoop (@iterations);
+
+//
+
+.paddingTopLoop (@i) when (@i > 0) {
+  .pt@{i} {
+    padding-top: ~'@{i}rem';
+  }
+  .paddingTopLoop(@i - 1);
+}
+
+.paddingTopLoop (@iterations);
+
+//
+
+.paddingBottomLoop (@i) when (@i > 0) {
+  .pb@{i} {
+    padding-bottom: ~'@{i}rem';
+  }
+  .paddingBottomLoop(@i - 1);
+}
+
+.paddingBottomLoop (@iterations);

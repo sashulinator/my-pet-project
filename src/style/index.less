@@ -1,0 +1,41 @@
+@import './reset.less';
+
+@import './components/collapse.less';
+@import './components/form.less';
+@import './components/other.less';
+
+@import './initial.less';
+@import './animation';
+@import './layout';
+@import './style';
+@import './flex.less';
+@import './margin.less';
+@import './util.less';
+@import './base/margin.less';
+@import './base/padding.less';
+@import './base/margin.less';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+@scrollColor: var(--background);
+@scrollBg: var(--primary);
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: @scrollBg @scrollColor;
+  scrollbar-width: thin;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+*::-webkit-scrollbar-track {
+  background: @scrollColor;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: @scrollBg;
+  border-radius: 2rem;
+  border: 0.1rem solid @scrollColor;
+}

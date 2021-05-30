@@ -1,0 +1,63 @@
+.SearchCar {
+  background: var(--background);
+  z-index: 5;
+
+  .CollapseHeader {
+    padding-bottom: 4rem;
+  }
+
+  .mainInfoContainer {
+    width: 60%;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: calc(var(--margin) * 1rem);
+      overflow: hidden;
+
+      div:first-child {
+        max-width: 60rem;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          bottom: 0;
+          right: -1rem;
+          width: 0;
+          white-space: nowrap;
+          content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . '
+            '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . '
+            '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ';
+        }
+      }
+      div:last-child {
+        padding-left: 1rem;
+        font-weight: bolder;
+        width: 200px;
+        display: flex;
+        align-items: flex-end;
+        // min-width: 26rem;
+        word-wrap: none;
+        background-color: var(--background);
+        z-index: 2;
+      }
+    }
+  }
+
+  .TelematicRecordPanelContent {
+    .disabled a * {
+      color: var(--color);
+    }
+  }
+
+  section.first {
+    margin-bottom: calc(var(--margin) * 1.33rem) !important;
+
+    h1 {
+      margin-bottom: 5px !important;
+    }
+    span {
+      font-size: 2em !important;
+    }
+  }
+}

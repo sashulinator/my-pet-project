@@ -1,0 +1,62 @@
+.SearchClientList {
+  .selectClientCheckbox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(var(--marginS) * 1rem);
+  }
+
+  .ClientListItem {
+    margin-top: calc(var(--marginS) * 1rem);
+    border: 0.1rem solid var(--borderColor);
+
+    .description {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > div {
+        width: 50%;
+        max-width: calc(((var(--carImageWidth) + var(--margin)) * 1rem) * 2);
+      }
+    }
+
+    .carList {
+      flex-wrap: wrap;
+      min-height: 23rem;
+      transform: translateY(-1rem);
+      font-weight: bolder;
+
+      .carImage {
+        width: calc(var(--carImageWidth) * 1rem);
+        height: calc(var(--carImageHeight) * 1rem);
+        margin-bottom: 1rem;
+        border-radius: 0;
+      }
+
+      img {
+        border-bottom: 2px solid;
+      }
+
+      a:hover {
+        color: var(--primary);
+
+        img {
+          border-bottom: 2px solid var(--primary);
+        }
+      }
+    }
+
+    .cardContent {
+      padding: 0 calc(var(--marginS) * 1rem) calc(var(--margin) * 1rem) calc(var(--marginS) * 1rem);
+    }
+
+    .rc-collapse-header {
+      padding: calc(var(--margin) * 1rem) calc(var(--marginS) * 1rem);
+      color: var(--color);
+    }
+  }
+
+  .rc-collapse-content {
+    overflow: var(--collapseOverflow);
+  }
+}

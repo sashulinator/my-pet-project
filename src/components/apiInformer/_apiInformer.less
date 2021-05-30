@@ -1,0 +1,21 @@
+.ApiInformer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ApiInformer-exit-active {
+  animation-name: disappear;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+.ApiInformer-enter-active {
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-direction: normal, reverse;
+}

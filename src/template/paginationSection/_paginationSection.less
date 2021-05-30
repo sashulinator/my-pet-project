@@ -1,0 +1,30 @@
+.PaginationSection {
+  padding: calc(var(--marginS) * 1rem) calc(var(--margin) * 1rem);
+  margin: 0 calc(var(--margin) * 1rem) calc(var(--margin) * 1rem);
+  background-color: var(--blurBackground);
+  backdrop-filter: blur(3px);
+  position: sticky;
+  top: calc(var(--marginS) * 1rem);
+  z-index: 2;
+  border: 1px solid var(--primary);
+
+  .CheckListLength {
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(var(--margin) * 1rem);
+  }
+
+  button {
+    font-size: 1.8em;
+    min-height: 4rem;
+    max-height: 4rem;
+    padding-right: calc(var(--margin) * 1rem);
+    padding-left: calc(var(--margin) * 1rem);
+  }
+}
+
+.loading {
+  .PaginationSection {
+    --primary: var(--darkGray);
+  }
+}

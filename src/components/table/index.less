@@ -1,0 +1,48 @@
+.Table {
+  border-bottom: 2px solid var(--primary);
+  width: 100%;
+  font-size: 1.8em;
+
+  p {
+    margin-bottom: 0.4em;
+  }
+
+  thead {
+    th {
+      font-weight: bolder;
+      // todo tableHaderColor
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding: 0 1.7em 1em 0;
+      text-align: center;
+      vertical-align: bottom;
+
+      :not(:last-child) {
+        padding-right: 1.7em;
+      }
+    }
+  }
+
+  td,
+  th {
+    text-align: left;
+    vertical-align: top;
+    padding: 1.7em 0 1.7em 0;
+
+    &:not(:last-child) {
+      padding-right: 1.7em;
+    }
+  }
+
+  tr {
+    td {
+      border-top: 1px solid var(--primary);
+    }
+  }
+}
+
+.loading {
+  table {
+    --primary: var(--darkGray);
+  }
+}

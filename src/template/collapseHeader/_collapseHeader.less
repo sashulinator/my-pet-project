@@ -1,0 +1,27 @@
+@translateY: 0.1em;
+
+.CollapseHeader {
+  display: flex;
+
+  .collapseTitle {
+    min-width: 30rem;
+  }
+
+  .collapseHeaderIcon {
+    font-size: 0.7em;
+    margin-right: calc(var(--marginS) * 1rem);
+  }
+
+  .collapseArrowIcon {
+    font-size: 0.5em;
+    transition: transform 0.2s;
+    margin-left: calc(var(--marginS) * 1rem);
+    transform: translateY(@translateY);
+  }
+}
+
+.rc-collapse-item-active {
+  .collapseArrowIcon {
+    transform: rotate(90deg) translateY(@translateY);
+  }
+}

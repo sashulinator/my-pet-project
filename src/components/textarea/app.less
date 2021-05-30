@@ -1,0 +1,27 @@
+.TextareaApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--inputBg, var(--formItemBg, transparent));
+  // padding-right: 1rem;
+
+  border-style: var(--inputBorderWidth, var(--formItemBorderWidth, solid));
+  border-width: var(--inputBorderWidth, var(--formItemBorderWidth, 1px));
+  border-color: var(--inputBorderColor, var(--formItemBorderColor, black));
+  border-radius: var(--inputBorderRadius, var(--formItemBorderRadius, 0.3rem));
+
+  // padding-left: 2rem;
+
+  .textareaText {
+    background-color: transparent;
+    color: var(--inputColor, var(--formItemColor, white));
+
+    &::placeholder {
+      color: var(--inputPlaceholderColor, var(--formItemPlaceholderColor, grey));
+    }
+  }
+
+  .iconApp {
+    color: var(--inputBorderColor, var(--formItemBorderColor, black));
+  }
+}

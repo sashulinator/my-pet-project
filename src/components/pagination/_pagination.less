@@ -1,0 +1,74 @@
+.Pagination {
+  user-select: none;
+  display: flex;
+  align-items: center;
+
+  .PerPage {
+    display: flex;
+    margin-right: calc(var(--marginS) * 1rem);
+
+    .perPageLabel {
+      font-weight: bolder;
+      font-size: 1.8em;
+      line-height: 0.8em;
+      width: 11rem;
+      margin-right: calc(var(--marginS) * 1rem);
+    }
+
+    .rc-select {
+      font-size: 1.6em;
+    }
+  }
+
+  * {
+    outline: none;
+  }
+
+  ul {
+    display: flex;
+    font-size: 1.6em;
+
+    li {
+      display: flex;
+      margin-left: calc(var(--marginS) * 1rem);
+
+      &:hover {
+        background: #4ba2d831;
+      }
+      &.disabled {
+        color: grey;
+      }
+
+      &.selected {
+        background: var(--primary);
+
+        a {
+          color: white;
+        }
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        min-width: 3.2rem;
+        min-height: 3.2rem;
+        max-width: 3.2rem;
+        max-height: 3.2rem;
+
+        margin-top: 0.1rem;
+
+        .IconWrapperUI {
+          margin: 0;
+        }
+      }
+
+      &.previous {
+        a {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

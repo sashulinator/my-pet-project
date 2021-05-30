@@ -1,0 +1,23 @@
+.ReactRouterDom {
+  position: absolute;
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'sider main';
+  grid-template-rows: calc(var(--headerHeight) * 1rem) 1fr;
+  grid-template-columns: auto 1fr;
+  min-height: 100%;
+
+  header {
+    grid-area: header;
+  }
+  footer {
+    grid-area: footer;
+  }
+  main {
+    grid-area: main;
+  }
+  .Sider {
+    grid-area: sider;
+  }
+}

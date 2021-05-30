@@ -1,0 +1,218 @@
+.hidden {
+  display: none;
+}
+
+.f-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tall {
+  height: 100%;
+}
+
+.lineHeightCrop1em {
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - 1em) * 0.5em);
+  }
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+// Color
+
+.colorDim {
+  color: var(--colorDim);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.primaryBg {
+  background-color: var(--primary);
+}
+
+.default {
+  color: var(--color);
+}
+
+.white {
+  color: var(--white);
+}
+
+.whiteBg {
+  background-color: var(--white);
+}
+
+.black {
+  color: var(--black);
+}
+
+.red {
+  color: var(--red);
+}
+
+.gray {
+  color: var(--gray);
+}
+
+.lightGray {
+  color: var(--lightGray);
+}
+
+.darkGray {
+  color: var(--darkGray);
+}
+
+.bgPrimary {
+  background-color: var(--primary);
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.wide {
+  width: 100%;
+}
+
+.fitCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.relative {
+  position: relative;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.borderBottom {
+  border-radius: 0;
+  border: 0 !important;
+  border-bottom: 2px solid #ccc !important;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.absolute-centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absolute-top-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.absolute-right-center {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.absolute-right-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+a .IconWrapperUI {
+  margin-right: 1em;
+}
+
+// font-size
+
+.big {
+  font-size: 2.6em;
+}
+
+.fs5 {
+  font-size: 0.5em;
+}
+
+.fs8 {
+  font-size: 0.8em;
+}
+
+.fs12 {
+  font-size: 1.2em;
+}
+
+.fs13 {
+  font-size: 1.3em;
+}
+
+.fs14 {
+  font-size: 1.4em;
+}
+
+.fs16 {
+  font-size: 1.6em;
+}
+
+.fs18 {
+  font-size: 1.8em;
+}
+
+.fs20 {
+  font-size: 2em;
+}
+
+.fs22 {
+  font-size: 2.2em;
+}
+
+.fs24 {
+  font-size: 2.4em;
+}
+
+.fs26 {
+  font-size: 2.6em;
+}
+
+.fs28 {
+  font-size: 2.8em;
+}
+
+.fs30 {
+  font-size: 3em;
+}
+
+.fs34 {
+  font-size: 3.4em;
+}

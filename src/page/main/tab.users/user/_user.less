@@ -1,0 +1,54 @@
+.UserForm {
+  background: white;
+  z-index: 2;
+
+  .userInfo {
+    min-width: 30em;
+
+    .userEditRow {
+      display: flex;
+      margin-bottom: 2.5rem;
+
+      .userEditKey {
+        width: 10rem;
+        margin-right: 3rem;
+      }
+
+      .userEditValue {
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  .userPermissions {
+    background-color: var(--primary);
+    padding: 4rem 6rem;
+    margin-left: 12rem;
+
+    .permissionTitle {
+      font-size: 1.5em;
+      color: white;
+      margin-bottom: 4rem;
+    }
+
+    .permissionRow {
+      display: flex;
+      align-items: center;
+      color: white;
+      margin-bottom: 2rem;
+      white-space: nowrap;
+
+      input {
+        margin-right: 2rem;
+      }
+    }
+
+    .KeyOutlinedIconWrapper {
+      color: white;
+      opacity: 0.1;
+      position: absolute;
+      right: 10%;
+      bottom: 10%;
+    }
+  }
+}

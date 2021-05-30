@@ -1,0 +1,59 @@
+.SelectApp {
+  cursor: pointer;
+  box-sizing: content-box;
+  overflow: hidden;
+
+  &.wide {
+    width: 100%;
+  }
+
+  &.rc-select {
+    font-size: inherit;
+  }
+
+  &.rc-select-unselected {
+    .rc-select-clear {
+      display: none;
+    }
+  }
+
+  .rc-select-selector {
+    height: 3rem;
+    border: 0;
+  }
+
+  .rc-select-selector {
+    height: 100%;
+  }
+
+  input {
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+  }
+
+  &.rc-select-single .rc-select-selector .rc-select-selection-item,
+  &.rc-select-single .rc-select-selector .rc-select-selection-placeholder {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rem;
+    opacity: 1;
+    white-space: nowrap;
+  }
+
+  &.rc-select-allow-clear .rc-select-clear {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.rc-select-show-arrow .rc-select-arrow {
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.rc-select-selected.rc-select-allow-clear .rc-select-arrow {
+    display: none;
+  }
+}

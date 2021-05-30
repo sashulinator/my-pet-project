@@ -1,0 +1,34 @@
+.ButtonApp {
+  border: 1px solid var(--primary);
+  outline: none;
+  cursor: pointer;
+  height: var(--buttonHeight, var(--formItemHeight, 4rem));
+  min-width: var(--buttonHeight, var(--formItemHeight, 4rem));
+
+  background-color: var(--primary);
+
+  color: var(--colorOnPrimaryBg);
+  padding: 0.2rem 4rem;
+
+  &.wide {
+    width: 100%;
+  }
+
+  &:focus {
+    border-color: var(--outlineColor, blue);
+  }
+
+  &.disabled {
+    border-color: grey;
+    background: lightgrey;
+    color: white;
+  }
+
+  &.icon {
+    padding: 0;
+    min-height: var(--buttonHeight, var(--formItemHeight, 4rem));
+    max-height: var(--buttonHeight, var(--formItemHeight, 4rem));
+    min-width: var(--buttonHeight, var(--formItemHeight, 4rem));
+    max-width: var(--buttonHeight, var(--formItemHeight, 4rem));
+  }
+}

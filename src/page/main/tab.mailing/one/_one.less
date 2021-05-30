@@ -1,0 +1,46 @@
+.MailingTemplate {
+  background: var(--background);
+  z-index: 5;
+
+  form {
+    max-width: 100rem;
+
+    .formField {
+      width: 100%;
+
+      & > * {
+        width: 100%;
+      }
+    }
+
+    .checkboxSelectAll {
+      border-width: 2px;
+    }
+
+    textarea {
+      height: 10em;
+      width: 100%;
+    }
+  }
+
+  .formField {
+    // display: flex;
+    // flex-direction: column;
+    position: relative;
+  }
+  .fieldError {
+    font-size: 1.3rem;
+    transform: translateY(150%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: red;
+  }
+}
+
+.eventList {
+  margin-top: calc(var(--margin) * 1rem);
+  height: 31rem;
+  overflow-y: auto;
+  padding-right: calc(var(--margin) * 1rem);
+}

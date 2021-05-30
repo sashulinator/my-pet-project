@@ -1,0 +1,28 @@
+.Notification {
+  position: relative;
+
+  .notificationWrapper {
+    > span {
+      margin: 0;
+    }
+  }
+
+  .count {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    border-radius: 3rem;
+    padding: 0.1rem 0.3rem;
+    background-color: red;
+  }
+
+  a {
+    transition: background-color 0.2s;
+  }
+
+  &.notificationListVisible {
+    > a {
+      background-color: var(--primary);
+    }
+  }
+}

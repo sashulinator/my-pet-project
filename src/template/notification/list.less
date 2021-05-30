@@ -1,0 +1,39 @@
+.NotificationList {
+  &.absolute {
+    right: 0;
+    top: calc(var(--headerHeight) * 1rem);
+    background-color: var(--background);
+    width: 50rem;
+    max-height: calc(90vh - var(--headerHeight) * 1rem);
+    z-index: 100;
+    border: 1px solid var(--borderColor);
+    box-shadow: 0px 21px 41px -27px rgba(0, 0, 0, 0.28);
+    overflow: auto;
+  }
+
+  .new {
+    background-color: var(--primaryTransparent2);
+  }
+
+  .empty {
+    color: var(--color);
+  }
+
+  > div {
+    border-top: 1px solid var(--borderColor);
+    padding: calc(var(--margin) * 1rem);
+  }
+
+  .messageContainer {
+    line-height: 1.6em;
+
+    .message {
+      margin-right: 1rem;
+      color: var(--color);
+    }
+
+    .IconWrapperUI {
+      font-size: 0.8em;
+    }
+  }
+}

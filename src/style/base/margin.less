@@ -1,0 +1,43 @@
+@iterations: 7;
+
+.marginRightLoop (@i) when (@i > 0) {
+  .mr@{i} {
+    margin-right: ~'@{i}rem';
+  }
+  .marginRightLoop(@i - 1);
+}
+
+.marginRightLoop (@iterations);
+
+//
+
+.marginLeftLoop (@i) when (@i > 0) {
+  .ml@{i} {
+    margin-left: ~'@{i}rem';
+  }
+  .marginLeftLoop(@i - 1);
+}
+
+.marginLeftLoop (@iterations);
+
+//
+
+.marginTopLoop (@i) when (@i > 0) {
+  .mt@{i} {
+    margin-top: ~'@{i}rem';
+  }
+  .marginTopLoop(@i - 1);
+}
+
+.marginTopLoop (@iterations);
+
+//
+
+.marginBottomLoop (@i) when (@i > 0) {
+  .mb@{i} {
+    margin-bottom: ~'@{i}rem';
+  }
+  .marginBottomLoop(@i - 1);
+}
+
+.marginBottomLoop (@iterations);

@@ -1,0 +1,43 @@
+.InputApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--inputBg, var(--formItemBg, transparent));
+  height: var(--inputHeight, var(--formItemHeight, 4rem));
+  padding-right: 1rem;
+
+  border-style: var(--inputBorderStyle, var(--formItemBorderStyle, solid));
+  border-width: var(--inputBorderWidth, var(--formItemBorderWidth, 1px));
+  border-color: var(--inputBorderColor, var(--formItemBorderColor, black));
+  border-radius: var(--inputBorderRadius, var(--formItemBorderRadius, 0.3rem));
+
+  padding-left: 2rem;
+
+  .inputText {
+    background-color: transparent;
+    color: var(--inputColor, var(--formItemColor, white));
+
+    &::placeholder {
+      color: var(--inputPlaceholderColor, var(--formItemPlaceholderColor, grey));
+    }
+  }
+
+  &.chameleon {
+    border-radius: 0;
+    border-width: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding-top: 0;
+    padding-left: 0;
+
+    input {
+      padding-top: 0;
+      padding-left: 0;
+    }
+  }
+
+  .iconApp {
+    color: var(--inputBorderColor, var(--formItemBorderColor, black));
+  }
+}

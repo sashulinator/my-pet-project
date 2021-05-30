@@ -1,0 +1,50 @@
+.SelectApp {
+  background-color: var(--inputBg, var(--formItemBg, transparent));
+  height: var(--selectHeight, var(--formItemHeight, 4rem));
+
+  .rc-select-selector {
+    height: var(--selectHeight, var(--formItemHeight, 4rem));
+    border-style: var(--selectBorderWidth, var(--formItemBorderWidth, solid));
+    border-width: var(--selectBorderWidth, var(--formItemBorderWidth, 1px));
+    border-color: var(--selectBorderColor, var(--formItemBorderColor, black));
+    border-radius: var(--selectBorderRadius, var(--formItemBorderRadius, 0.3rem));
+  }
+
+  .rc-select-clear {
+    width: 14px;
+    height: 14px;
+  }
+
+  .rc-select-selection-placeholder {
+    color: var(--selectPlaceholderColor, var(--formItemPlaceholderColor, grey));
+  }
+
+  .rc-select-selection-item {
+    color: var(--selectColor, var(--formItemColor, white));
+  }
+
+  .iconApp {
+    color: var(--selectBorderColor, var(--formItemBorderColor, black));
+  }
+}
+
+.rc-select-dropdown {
+  cursor: pointer;
+  transform: translateX(-3px);
+  border-style: var(--selectBorderWidth, var(--formItemBorderWidth, solid));
+  border-width: var(--selectBorderWidth, var(--formItemBorderWidth, 1px));
+  border-color: var(--selectBorderColor, var(--formItemBorderColor, black));
+  border-radius: var(--selectBorderRadius, var(--formItemBorderRadius, 0.3rem));
+  min-height: 30px;
+  position: absolute;
+  background-color: var(--selectBg, var(--formItemBg, --background));
+
+  .rc-select-hidden {
+    display: none;
+  }
+  .rc-select-item {
+    &.rc-select-item-option-active {
+      background: var(--selectBorderColor, var(--formItemBorderColor, black));
+    }
+  }
+}

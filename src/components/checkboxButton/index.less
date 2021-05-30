@@ -1,0 +1,39 @@
+.CheckboxButtonApp {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s;
+  overflow: hidden;
+
+  &.focused {
+    border-color: var(--outlineColor, blue);
+  }
+
+  .IconAppCheck {
+    opacity: 1;
+    transition: 0.2s;
+    transform: translateY(0);
+  }
+
+  &.unchecked {
+    .IconAppCheck {
+      opacity: 0;
+      transform: translateY(-40%);
+    }
+  }
+
+  &.disabled {
+    border-color: grey;
+    background: lightgrey;
+    color: white;
+  }
+
+  input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+  }
+
+  .placeholder {
+    margin-right: 1rem;
+  }
+}
