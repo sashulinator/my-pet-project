@@ -13,7 +13,7 @@ import Collapse, { Panel } from 'rc-collapse'
 import Button from '@/components/button'
 import DownloadIcon from '@/components/svg/downloadFilledIcon'
 import Select from '@/components/select'
-import Input from '@/components/input'
+import Input from '@/components/newInput'
 import CheckboxButton from '@/components/checkboxButton'
 
 import MALFUNCTIONS from '@/constant/lastTelemetry'
@@ -105,7 +105,7 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                 <Field name="carParameter.stateNumber">
                   {({ input, meta }) => (
                     <div className="formField f-center-center">
-                      <Input {...input} wide type="text" id="carParameter.stateNumber" placeholder="Гос. номер" />
+                      <Input {...input} clearable type="text" id="carParameter.stateNumber" placeholder="Гос. номер" />
                       {meta.touched && meta.error && <span className="fieldError">{meta.error}</span>}
                     </div>
                   )}
@@ -169,7 +169,12 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                 <Field name="regionId">
                   {({ input, meta }) => (
                     <div className="formField f-center-center">
-                      <Input {...input} wide type="text" id="regionId" placeholder="Регион нахождения ТС" />
+                      <Input
+                        {...input}
+                        type="text"
+                        id="regionId"
+                        placeholder="Регион нахождения  kjhgfkhgkjhgkjhgkj jhgkjhgjh"
+                      />
                       {meta.touched && meta.error && <span className="fieldError">{meta.error}</span>}
                     </div>
                   )}
@@ -177,7 +182,7 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                 <Field name="vin">
                   {({ input, meta }) => (
                     <div className="formField f-center-center">
-                      <Input {...input} wide type="text" placeholder="VIN заводской (ПТС)" />
+                      <Input {...input} type="text" placeholder="VIN заводской (ПТС)" />
                       {meta.touched && meta.error && <span className="fieldError">{meta.error}</span>}
                     </div>
                   )}
@@ -187,13 +192,7 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                 <Field name="lastTelemetry.odometer.minValue">
                   {({ input, meta }) => (
                     <div className="formField f-center-center">
-                      <Input
-                        {...input}
-                        type="text"
-                        wide
-                        id="lastTelemetry.odometer.minValue"
-                        placeholder="Пробег (min)"
-                      />
+                      <Input {...input} type="text" id="lastTelemetry.odometer.minValue" placeholder="Пробег (min)" />
                       {meta.touched && meta.error && <span className="fieldError">{meta.error}</span>}
                     </div>
                   )}
@@ -201,13 +200,7 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                 <Field name="lastTelemetry.odometer.maxValue">
                   {({ input, meta }) => (
                     <div className="formField f-center-center">
-                      <Input
-                        {...input}
-                        wide
-                        type="text"
-                        id="lastTelemetry.odometer.maxValue"
-                        placeholder="Пробег (max)"
-                      />
+                      <Input {...input} type="text" id="lastTelemetry.odometer.maxValue" placeholder="Пробег (max)" />
                       {meta.touched && meta.error && <span className="fieldError">{meta.error}</span>}
                     </div>
                   )}
@@ -360,7 +353,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.remainingMileage.minValue"
                                 placeholder="Остаток пробега до ТО (min)"
@@ -374,7 +366,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.remainingMileage.maxValue"
                                 placeholder="Остаток пробега до ТО (max)"
@@ -391,7 +382,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                               <Input
                                 {...input}
                                 type="text"
-                                wide
                                 id="lastTelemetry.onboardPowerVoltage.minValue"
                                 placeholder="Напряжение сети (min)"
                               />
@@ -404,7 +394,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.onboardPowerVoltage.maxValue"
                                 placeholder="Напряжение сети (max)"
@@ -420,7 +409,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.fuelLevel.minValue"
                                 placeholder="Уровень топлива (min)"
@@ -434,7 +422,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.fuelLevel.minValue"
                                 placeholder="Уровень топлива (max)"
@@ -450,7 +437,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.engineOilPressure.minValue"
                                 placeholder="Давление масла в двигателе (min)"
@@ -464,7 +450,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.engineOilPressure.maxValue"
                                 placeholder="Давление масла в двигателе (max)"
@@ -480,7 +465,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.coolantTemp.minValue"
                                 placeholder="t охлаждающей жидкости (min)"
@@ -494,7 +478,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.coolantTemp.maxValue"
                                 placeholder="t охлаждающей жидкости (max)"
@@ -510,7 +493,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.fuelConsumption.minValue"
                                 placeholder="Потребление топлива (min)"
@@ -524,7 +506,6 @@ const CarSearchFilter: FC<CarSearchFilterProps> = ({ onSubmit, initialValues, li
                             <div className="formField f-center-center">
                               <Input
                                 {...input}
-                                wide
                                 type="text"
                                 id="lastTelemetry.fuelConsumption.maxValue"
                                 placeholder="Потребление топлива (max)"
