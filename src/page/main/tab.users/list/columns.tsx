@@ -81,15 +81,6 @@ const columns: UseTableOptions<UserModel & { skl?: true }>['columns'] = [
     ),
   },
   {
-    Header: <span className="nowrap">Последний вход</span>,
-    accessor: 'lastEntry',
-    Cell: ({ value, row }): JSX.Element => (
-      <div className="overflow-ellipsis" style={{ width: '20rem' }}>
-        <Skl row={row}>{value}</Skl>
-      </div>
-    ),
-  },
-  {
     Header: 'Активность',
     accessor: 'enabled',
     width: '1%',

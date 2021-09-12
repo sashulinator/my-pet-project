@@ -15,7 +15,7 @@ import Route from '@savchenko91/rc-route-constant'
 
 import ArrowIcon from '@/components/svg/arrowFilledIcon'
 
-import ROUTES, { Payload } from '@/constant/routes'
+import { ROUTES, Payload } from '@/constant/routes'
 
 // import siderBottomImg from '@/img/svg/sider-bottom.svg'
 
@@ -37,19 +37,19 @@ const AppSider: FC = (): JSX.Element => {
   const location = useLocation()
 
   const menu = useMemo(() => {
-    const memoMenu: Route<Payload>[] = []
-    if (PERMISSIONS.PERMISSION_DEALER_CARS.is || PERMISSIONS.PERMISSION_DEALER_CLIENTS.is) {
-      memoMenu.push(ROUTES.SEARCH)
-    }
-    if (PERMISSIONS.PERMISSION_CLIENT_FEEDBACK.is) {
-      memoMenu.push(ROUTES.FEEDBACK)
-    }
-    if (PERMISSIONS.PERMISSION_PARAMS_CONFIG.is) {
-      memoMenu.push(ROUTES.PARAMS_CONFIG_LIST)
-    }
-    if (PERMISSIONS.PERMISSION_MAILINGS.is) {
-      memoMenu.push(ROUTES.MAILING)
-    }
+    const memoMenu: Route<string, Payload>[] = []
+    // if (PERMISSIONS.PERMISSION_DEALER_CARS.is || PERMISSIONS.PERMISSION_DEALER_CLIENTS.is) {
+    //   memoMenu.push(ROUTES.SEARCH)
+    // }
+    // if (PERMISSIONS.PERMISSION_CLIENT_FEEDBACK.is) {
+    //   memoMenu.push(ROUTES.FEEDBACK)
+    // }
+    // if (PERMISSIONS.PERMISSION_PARAMS_CONFIG.is) {
+    //   memoMenu.push(ROUTES.PARAMS_CONFIG_LIST)
+    // }
+    // if (PERMISSIONS.PERMISSION_MAILINGS.is) {
+    //   memoMenu.push(ROUTES.MAILING)
+    // }
     if (PERMISSIONS.PERMISSION_MANAGEMENT.is) {
       memoMenu.push(ROUTES.USER_LIST)
     }

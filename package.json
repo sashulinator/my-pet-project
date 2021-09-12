@@ -9,7 +9,7 @@
     "@savchenko91/rc-redux-api-mw": "2.0.6",
     "@savchenko91/rc-redux-api-mw-fake-response": "2.0.6",
     "@savchenko91/rc-redux-api-mw-query": "2.0.6",
-    "@savchenko91/rc-route-constant": "^3.0.0",
+    "@savchenko91/rc-route-constant": "4.0.4",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",

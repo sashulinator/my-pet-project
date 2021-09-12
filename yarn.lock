@@ -1485,13 +1485,10 @@
   resolved "https://registry.yarnpkg.com/@savchenko91/rc-redux-api-mw/-/rc-redux-api-mw-2.0.6.tgz#20cf2caa2b85461f60eb6e5be73c82ba0cd37379"
   integrity sha512-8zKBHnfPGb+njkjEQT+MTa9jj30TrLkBTwmKatPs7+/IpMGQjq+OKjGDRIv9rvzWbKSiPxoGnKr2WA9NE8H3aA==
 
-"@savchenko91/rc-route-constant@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@savchenko91/rc-route-constant/-/rc-route-constant-3.0.0.tgz#998054731a8b2c963cbbe075897ed3644519db92"
-  integrity sha512-SEFhhbSlJzpYMvmuSzAVJEd/Oa/wChVP0To/HJG4cpzlUisBWZkUC96iMIM+DBPPdWb9f2sD9ZznZr260O1c/Q==
-  dependencies:
-    "@types/react" "^17.0.0"
-    global "^4.4.0"
+"@savchenko91/rc-route-constant@^4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@savchenko91/rc-route-constant/-/rc-route-constant-4.0.4.tgz#e948b8090bcf05a09a6f69f13a60aaed27c299ea"
+  integrity sha512-9Hw2yv8zNR3YnlvZWUzVv4nxUGOi/tHm5AMG7kryXJU6n6ykLElJolMo4wYGOgiPDdafgUZabRPUcK5pnrn2wQ==
 
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.3"
@@ -1936,7 +1933,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.0":
+"@types/react@*":
   version "17.0.3"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.3.tgz#ba6e215368501ac3826951eef2904574c262cc79"
   integrity sha512-wYOUxIgs2HZZ0ACNiIayItyluADNbONl7kt8lkLjVK8IitMH5QMyAh75Fwhmo37r1m7L2JaFj03sIfxBVDvRAg==
@@ -4550,11 +4547,6 @@ dom-serializer@0:
     domelementtype "^2.0.1"
     entities "^2.0.0"
 
-dom-walk@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
-  integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
-
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -5868,14 +5860,6 @@ global-prefix@^3.0.0:
     ini "^1.3.5"
     kind-of "^6.0.2"
     which "^1.3.1"
-
-global@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/global/-/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
-  integrity sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==
-  dependencies:
-    min-document "^2.19.0"
-    process "^0.11.10"
 
 globals@^11.1.0:
   version "11.12.0"
@@ -8131,13 +8115,6 @@ mimic-response@^1.0.0, mimic-response@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
   integrity sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==
-
-min-document@^2.19.0:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/min-document/-/min-document-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
-  integrity sha1-e9KC4/WELtKVu3SM3Z8f+iyCRoU=
-  dependencies:
-    dom-walk "^0.1.0"
 
 min-indent@^1.0.0:
   version "1.0.1"

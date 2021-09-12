@@ -9,6 +9,7 @@ import SearchIcon from '@/components/svg/searchFilledIcon'
 import StarIcon from '@/components/svg/starFilledIcon'
 import UserIcon from '@/components/svg/userFilledIcon'
 
+const { PUBLIC_URL } = process.env
 export interface Payload {
   ICON: React.ReactElement
   LABEL: string
@@ -21,9 +22,9 @@ class Routes {
 
   public readonly APP: Route
 
-  public readonly ABOUT: Route<Payload>
+  public readonly ABOUT: Route<string, Payload>
 
-  public readonly SEARCH: Route<Payload>
+  public readonly SEARCH: Route<string, Payload>
 
   public readonly SEARCH_CAR: Route
 
@@ -33,7 +34,7 @@ class Routes {
 
   public readonly SEARCH_CLIENT_CAR: Route
 
-  public readonly FEEDBACK: Route<Payload>
+  public readonly FEEDBACK: Route<string, Payload>
 
   public readonly FEEDBACK_DIALOG: Route
 
@@ -45,9 +46,9 @@ class Routes {
 
   public readonly PARAMS_CONFIG_APPLY: Route
 
-  public readonly PARAMS_CONFIG_LIST: Route<Payload>
+  public readonly PARAMS_CONFIG_LIST: Route<string, Payload>
 
-  public readonly MAILING: Route<Payload>
+  public readonly MAILING: Route<string, Payload>
 
   public readonly MAILING_HISTORY: Route
 
@@ -61,7 +62,7 @@ class Routes {
 
   public readonly USER: Route
 
-  public readonly USER_LIST: Route<Payload>
+  public readonly USER_LIST: Route<string, Payload>
 
   constructor() {
     // Root
@@ -215,5 +216,18 @@ class Routes {
 export { Routes }
 
 const routes = new Routes()
+
+const ROUTES = {
+  USER_LIST: new Route({
+    name: 'Users',
+    path: `${PUBLIC_URL}/users`,
+    payload: {
+      ICON: <UserIcon />,
+      LABEL: 'user-list',
+    },
+  }),
+} as const
+
+export { ROUTES }
 
 export default routes

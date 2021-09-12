@@ -502,10 +502,10 @@ module.exports = function (webpackEnv) {
           {
             inject: true,
             template: paths.appHtml,
-            filename: '404.html',
           },
           isEnvProduction
             ? {
+                filename: '404.html',
                 minify: {
                   removeComments: true,
                   collapseWhitespace: true,
